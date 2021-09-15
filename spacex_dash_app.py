@@ -92,6 +92,7 @@ def update_success_pie_chart(launch_site):
         values = [success_launches,(total_launches-success_launches)]
         fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
         fig.update_layout(title='Total Success Launches for site {}'.format(launch_site))
+        fig.update_traces(marker=dict(colors=['#FF6961', '#77DD77']))
     return fig
 
 # TASK 4:
